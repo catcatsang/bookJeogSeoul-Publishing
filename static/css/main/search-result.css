@@ -1,0 +1,130 @@
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* 헤더(임시) */
+.top-header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: var(--ui-background);
+    border-bottom: 1px solid var(--GTrans-02);
+}
+
+.top-header header{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    max-width: var(--header-width);
+    height: 64px;
+    padding: 0 24px;
+    margin: 0 auto;
+    background: var(--ui-background);
+}
+
+header nav{
+    display: block;
+}
+
+header nav>ul{
+    color: var(--text-strong);
+    display: flex;
+    align-items: center;
+}
+
+header .util-wrap{
+    gap: 16px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.gnb a{
+    padding: 12px 24px;
+    font-size: 20px;
+    position: relative;
+    color: var(--secondary);
+}
+/* // 헤더(임시) */
+
+.content{
+    max-width: unset;
+    padding: 0;
+}
+
+.search-container{
+    background: var(--ui-background);
+    display: block;
+    min-height: unset;
+}
+
+/* 검색결과 상단 */
+.back-component.border-hidden{
+    height: 48px;
+    background: var(--ui-background);
+    border: none !important;
+}
+
+.back-wrap.line{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 64;
+    z-index: 50;
+    height: 49px;
+    padding-top: env(safe-area-inset-top);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    background: var(--ui-background);
+    border-bottom: 1px solid var(--ui-06);
+}
+
+.search-container .back-component .back-wrap>div {
+    margin: 0 auto;
+    max-width: var(--search-width) !important;
+}
+
+.back-component .back{
+    position: relative;
+    max-width: var(--header-width);
+    margin: 0 auto;
+    height: 48px;
+}
+
+.back-component .back h2{
+    overflow: hidden;
+    padding: 0 45px;
+    font-size: 18px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    /* line-height: 48px; */
+    color: var(--text-01);
+    font-weight: bold;
+}
+/* // 검색결과 상단 */
+
+/* 검색창 */
+.search-container .search-input-wrap{
+    position: sticky;
+    z-index: 51;
+    width: 100%;
+    background: var(--ui-background);
+    top: 96px;
+}
+
+.search-input{
+    max-width: 1440px;
+    padding: 8px 0;
+    margin: 0 auto;
+}
+/* // 검색창 */
