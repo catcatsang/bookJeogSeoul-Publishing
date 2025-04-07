@@ -142,6 +142,10 @@
     content: "\e80a";
 }
 
+.editor-icon--heart_filled:before {
+    content: "\e809";
+}
+
 .editor-icon--comment:before {
     content: "\e808";
 }
@@ -1252,20 +1256,6 @@ html:not(.ie) .slide-container .slide-wrapper {
     padding-bottom: 16px;
 }
 
-.comment .user-img {
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    -webkit-filter: drop-shadow(0 0 1px rgba(0, 0, 0, .25));
-    filter: drop-shadow(0 0 1px rgba(0, 0, 0, .25));
-    margin-right: 8px;
-}
-
 .comment .user-img a {
     display: block;
     height: 100%;
@@ -1333,4 +1323,99 @@ html:not(.ie) .slide-container .slide-wrapper {
 .comment .com-contents .reply-setting .more-btn {
     width: 24px;
     height: 24px;
+}
+
+.comment .reply-container .reply-item {
+    margin: 24px 0;
+    position: relative;
+}
+
+.comment .reply-container .reply-item-inner {
+    border-left-color: var(--ui-05);
+    border-bottom: 1px var(--ui-05);
+    border-style: solid;
+    border-right-color: var(--ui-05);
+    border-top-color: var(--ui-05);
+    padding-bottom: 16px;
+    margin-left: 64px;
+}
+
+.comment .reply-container .reply-item-inner:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23C4C4C4' d='M0 0h1v16H0z'/%3E%3Cpath fill='%23C4C4C4' d='M0 15h16v1H0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+    margin-right: 8px;
+}
+
+.comment .reply-container .reply-item-inner .user-img {
+    width: 40px;
+    height: 40px;
+}
+
+.comment .com-contents {
+    -ms-flex: 1;
+    flex: 1;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -.6px;
+}
+
+.comment .com-contents-head {
+    font-size: .75em;
+    line-height: 18px;
+}
+
+.comment .com-contents-top {
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.comment .com-contents-top .nickname {
+    color: var(--text-02);
+    width: 70%;
+}
+
+.comment .com-contents-date {
+    color: var(--text-04);
+}
+
+.comment .com-contents .reply-setting {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--text-03);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.comment .com-contents .reply-setting .more-btn {
+    width: 24px;
+    height: 24px;
+}
+
+.comment .com-contents-body {
+    font-size: 1em;
+    line-height: 24px;
+    padding-top: 16px;
+}
+
+.comment .com-contents-body p {
+    color: var(--text-01);
+    word-break: break-all;
+}
+
+.comment .com-contents-body .comment-text {
+    display: none;
+    white-space: pre-wrap;
+}
+
+.comment .com-contents-body .comment-text.show {
+    display: block;
+    margin: 0 16px 0 0;
 }
