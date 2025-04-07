@@ -6,55 +6,6 @@ a{
     text-decoration: none;
 }
 
-/* 헤더(임시) */
-.top-header {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background: var(--ui-background);
-    border-bottom: 1px solid var(--GTrans-02);
-}
-
-.top-header header{
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    max-width: var(--header-width);
-    height: 64px;
-    padding: 0 24px;
-    margin: 0 auto;
-    background: var(--ui-background);
-}
-
-header nav{
-    display: block;
-}
-
-header nav>ul{
-    color: var(--text-strong);
-    display: flex;
-    align-items: center;
-}
-
-header .util-wrap{
-    gap: 16px;
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-}
-
-.gnb a{
-    padding: 12px 24px;
-    font-size: 20px;
-    position: relative;
-    color: var(--secondary);
-}
-/* // 헤더(임시) */
-
 .content{
     max-width: unset;
     padding: 0;
@@ -77,9 +28,9 @@ header .util-wrap{
     position: fixed;
     left: 0;
     right: 0;
-    top: 64;
+    top: 0;
     z-index: 50;
-    height: 49px;
+    height: 48px;
     padding-top: env(safe-area-inset-top);
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
@@ -119,7 +70,8 @@ header .util-wrap{
     z-index: 51;
     width: 100%;
     background: var(--ui-background);
-    top: 96px;
+    top: 48px;
+    border-bottom: 1px solid var(--ui-08);
 }
 
 .search-input{
@@ -127,4 +79,113 @@ header .util-wrap{
     padding: 8px 0;
     margin: 0 auto;
 }
+
+.search-input .search-inner{
+    padding: 0 20px;
+}
+
+.search-input .search-inner .input-area{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 44px;
+    padding: 0 14px;
+    margin: 0 auto;
+    background-color: var(--ui-02);
+    border-radius: 20px;
+}
+
+
+.icon-searchbar{
+    z-index: 1;
+    transition: background-color .2s linear, border-color .2s linear, color .2s linear;
+    overflow: hidden;
+    position: absolute;
+    top: 49%;
+    height: 24px;
+    padding: 0;
+    background: transparent;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--text-03);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: auto;
+}
+
+.icon-searchbar::before{
+    cursor: pointer;
+    letter-spacing: -.6px;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--text-03);
+    font-family: icon;
+    content: "\e83a";
+    vertical-align: top;
+}
+
+.input-default{
+    font-family: SpoqaHanSansNeo, Apple SD Gothic Neo, Malgun Gothic, sans-serif;
+    border: 0;
+    letter-spacing: -.6px;
+    overflow: hidden;
+    width: 100%;
+    height: 44px;
+    padding-left: 24px;
+}
+
+.search-input .input-default label{
+    display: block;
+    height: 100%;
+    padding: 0;
+    border: transparent;
+}
+
+.input-default .inner{
+    height: 100%;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.clear-button{
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.clear-button::before{
+    font-family: icon;
+    content: "\e84e";
+    font-size: 17px;
+    color: var(--ui-06);
+    line-height: 16px;
+}
+
+.inner .input{
+    flex: 1;
+}
+
+label .input input{
+    line-height: 1.15;
+    margin: 0;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    color: var(--text-01);
+    height: 100%;
+    padding-left: 10px;
+}
+
+label .input input:focus{
+    outline: none;
+}
+
+label .input input::placeholder{
+    color: #c4c8ca;
+    font
 /* // 검색창 */
