@@ -569,6 +569,12 @@ label .input input::placeholder{
 /* // 검색 목록 */
 
 /* 독후감 검색 목록 */
+@media (min-width: 1280px) {
+    .result-list.grid ul li:nth-child(2n+1) {
+        margin-left: 16px;
+    }
+}
+
 .search-result-book-report{
     display: flex;
     align-items: center;
@@ -592,19 +598,16 @@ label .input input::placeholder{
 }
 
 .result-list .slide-wrapper.book-report{
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    -ms-flex-align: end;
     align-items: flex-end;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    white-space: nowrap;
+    flex-wrap: wrap;
     padding: 12px 24px 24px;
-}
+    }
 
 .result-list ul.book-report li{
-    width: calc(50% - 12px);
+    width: calc(50% - 45px);
     border-radius: 16px;
     background: var(--ui-up-01);
     overflow: hidden;
@@ -616,7 +619,6 @@ label .input input::placeholder{
     .result-list .slide-wrapper .slide-item{
         min-width: 407px;
         margin-right: 24px;
-        margin-bottom: 0;
     }
 }
 
@@ -859,7 +861,6 @@ div.book-image{
     .result-list .slide-wrapper .slide-item{
         min-width: 407px;
         margin-right: 24px;
-        margin-bottom: 0;
     }
 }
 
@@ -1355,7 +1356,7 @@ div.book-image{
     top: 0;
     bottom: 0;
     z-index: 1000;
-    display: flex;
+    display: none; /*켜지면 flex*/
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, .8);

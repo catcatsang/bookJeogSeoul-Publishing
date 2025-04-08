@@ -1,6 +1,10 @@
 // 정렬 버튼을 누르면 정렬 모달창 켜짐
 const sortModal = document.querySelector(".modal-section");
-const openModalButton = 
+const openModalButton = document.querySelector(".filter-wrapper");
+
+openModalButton.addEventListener("click", (e) => {
+    sortModal.style.display = "flex";
+});
 
 // 정렬 모달창에서 누르면 각 옵션이 선택되며 스타일이 달라짐
 const optionButtons = document.querySelectorAll(".modal-radio");
@@ -18,6 +22,6 @@ optionButtons.forEach((optionButton) => {
 // 취소 버튼 누르면 정렬 모달창 꺼짐
 const cancelButton = document.querySelector(".button-cancel");
 
-cancelButton.addEventListener((e) => {
+cancelButton.addEventListener("click", (e) => {
     sortModal.style.display = "none";
 });
