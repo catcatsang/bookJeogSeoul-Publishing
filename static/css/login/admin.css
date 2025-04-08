@@ -1,0 +1,116 @@
+*, :after, :before {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+* {
+    letter-spacing: -.6px;
+}
+body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=light] {
+    --ui-background: #fff;
+    --ui-01: #fbfbfb;
+    --ui-02: #f7f7f7;
+    --ui-03: #f2f2f2;
+    --ui-04: #efefef;
+    --ui-05: #ececec;
+    --ui-06: #dfdfdf;
+    --ui-07: #c1c1c1;
+    --ui-08: #555;
+    --ui-09: #333;
+    --ui-10: #242424;
+    --ui-up: #fff;
+    --ui-up-01: #fff;
+    --ui-up-02: #fff;
+    --ui-up-03: #fff;
+    --ui-up-04: #fff;
+    --primary: #ffeb60;
+    --primary-press: #ffe04b;
+    --secondary: #333;
+    --secondary-press: #242424;
+    --tertiary: #fff;
+    --tertiary-press: #f7f7f7;
+    --danger: #df1d1d;
+    --danger-press: #bc1a1a;
+    --quaternary: #ececec;
+    --quaternary-press: #dfdfdf;
+    --cancel: #c1c1c1;
+    --cancel-press: #a5a5a5;
+    --success: #0073cb;
+    --error: #f05c2e;
+    --text-strong: #000;
+    --text-01: #242424;
+    --text-02: #555;
+    --text-03: #6f6f6f;
+    --text-04: #8b8b8b;
+    --field-readonly: #ececec;
+    --placeholder: #c1c1c1;
+    --audio: #a451f7;
+    --myaudio: #533670;
+    --focus: #469fe3;
+    --Line-01: #dfdfdf;
+    --Line-02: #ececec;
+    --Line-03: #f7f7f7;
+}
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: wheat;
+    border-bottom: 1px solid gray;
+}
+.header header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: var(--header-width);
+    height: 64px;
+    padding: 0 24px;
+    margin: 0 auto;
+    background: var(--ui-background);
+}
+.header a {
+    display: block;
+    height: 20px;
+}
+img {
+    max-width: 100%;
+    vertical-align: top;
+    border-style: none;
+    pointer-events: none;
+}
+h1 {
+    width: 100px;
+    margin: 0 25px 20px 0;
+    z-index: 1;
+}
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    font-weight: 300;
+    src: url(https://d3udu241ivsax2.cloudfront.net/common/mds/fonts/SpoqaHanSansNeo-Thin.woff2) format("woff2"),url(https://d3udu241ivsax2.cloudfront.net/common/mds/fonts/SpoqaHanSansNeo-Thin.woff) format("woff")
+}
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    font-weight: 500;
+    src: url(../../fonts/main/SpoqaHanSansNeo-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    font-weight: 900;
+    src: url(../../fonts/main/SpoqaHanSansNeo-Bold.ttf) format("truetype");
+}
+*{
+    font-family: SpoqaHanSansNeo, Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 2.5;
+    color: var(--text-01);
+}

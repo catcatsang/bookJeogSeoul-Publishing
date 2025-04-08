@@ -399,3 +399,12 @@ input:focus {
     padding-top: 30px;
     scale: 1.1;
 }
+.admin-login {
+    padding: 400px 0px;
+}
+.login-wrap {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #ececec;
+}
