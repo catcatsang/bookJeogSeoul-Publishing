@@ -837,19 +837,16 @@ div.book-image{
 }
 
 .result-list .slide-wrapper.discussion{
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    -ms-flex-align: end;
     align-items: flex-end;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    white-space: nowrap;
+    flex-wrap: wrap;
     padding: 12px 24px 24px;
 }
 
 .result-list ul.discussion li{
-    width: calc(50% - 12px);
+    width: calc(50% - 45px);
     border-radius: 16px;
     background: var(--ui-up-01);
     overflow: hidden;
@@ -1069,7 +1066,7 @@ div.book-image{
 }
 
 .result-list .slide-wrapper.organization li{
-    width: calc(50% - 12px);
+    width: calc(50% - 45px);
     border-radius: 16px;
     background: var(--ui-up-01);
     overflow: hidden;
@@ -1081,17 +1078,15 @@ div.book-image{
     .slide-wrapper.organization li{
         min-width: 407px;
         margin-right: 24px;
-        margin-bottom: 0;
     }
 }
 
 .result-list .organization.slide-wrapper{
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    flex-wrap: nowrap;
-    white-space: nowrap;
+    flex-wrap: wrap;
     padding: 12px 24px 24px;
 }
 
@@ -1196,17 +1191,16 @@ div.book-image{
 }
 
 .result-list .slide-wrapper.donate{
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    flex-wrap: nowrap;
-    white-space: nowrap;
+    flex-wrap: wrap;
     padding: 12px 24px 24px;
 }
 
 .result-list .slide-wrapper.donate li{
-    width: calc(50% - 12px);
+    width: calc(50% - 45px);
     border-radius: 16px;
     background: var(--ui-up-01);
     overflow: hidden;
@@ -1218,7 +1212,6 @@ div.book-image{
     .result-list .slide-wrapper.donate .slide-item{
         min-width: 407px;
         margin-right: 24px;
-        margin-bottom: 0;
     }
 }
 
