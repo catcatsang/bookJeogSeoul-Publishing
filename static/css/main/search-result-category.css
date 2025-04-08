@@ -32,6 +32,28 @@ h1{
     z-index: 200;
 }
 
+button, input {
+    background-color: transparent;
+    border: 0;
+}
+
+input {
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+[type=checkbox], [type=radio] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+#wrap{
+    height: 100%;
+}
+
 .content{
     max-width: unset;
     padding: 0;
@@ -308,12 +330,83 @@ label .input input::placeholder{
 }
 /* // 검색 분류 네비 */
 
+/* 검색결과 필터 */
+.search-container .search-options .result-list-header{
+    background-color: var(--ui-up);
+    padding: 24px 24px 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    min-height: 64px;
+}
+
+.result-list-header p{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--text-01);
+}
+
+.result-list-header div button.icon-arrow-bottom{
+    width: auto;
+    height: 24px;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 0 20px 0 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--text-02);
+    align-items: center;
+}
+
+.result-list-header div button.icon-arrow-bottom::before{
+    font-family: icon;
+    content: "\e803";
+    position: absolute;
+    right: 4px;
+}
+/* // 검색결과 필터 */
+
 /* 검색 목록 */
 .section-wrap{
     min-height: 850px;
     max-width: var(--search-width);
     margin: 0 auto;
     padding-bottom: 24px;
+}
+
+.search-result-book{
+    background-color: var(--ui-up);
+    padding: 24px 24px 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    min-height: 64px;
+}
+
+.search-result-book p{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--text-01);
+}
+
+.icon-arrow-bottom .search-result-sort{
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 0 20px 0 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--text-02);
+    align-items: center;
 }
 
 .section-wrap .search-list>h2{
@@ -1250,3 +1343,153 @@ div.book-image{
     color: #a5a5a5;
 }
 /* // 기부 수혜자 목록 */
+
+/* 검색 정렬 모달창 */
+.modal-section{
+    font-family: SpoqaHanSansNeo, Apple SD Gothic Neo, Malgun Gothic, sans-serif;
+    border: 0;
+    letter-spacing: -.6px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.modal-wrap{
+    overflow: hidden;
+    background-color: var(--ui-up-03);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 360px;
+}
+
+.modal-inner{
+    padding: 32px 24px;
+}
+
+.modal-footer{
+    display: flex;
+}
+
+.modal-header{
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.modal-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+}
+
+strong.modal-title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--text-01);
+}
+
+.radio-body{
+    width: 100%;
+}
+
+.radio-body>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.radio-body>div>div{
+    flex: 0 0 48%;
+    margin-bottom: 8px;
+}
+
+.modal-radio{
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    width: 120px;
+    height: 48px;
+    border: 1px solid var(--ui-06);
+    border-radius: 8px;
+    transition: border-width .2s linear;
+    flex: 0 0 48%;
+    margin-bottom: 8px;
+}
+
+.modal-radio.checked{
+    border-color: var(--primary);
+    border-width: 3px;
+}
+
+.modal-radio input{
+    position: absolute;
+}
+
+.radio-view{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.ir{
+    position: absolute;
+    left: -10000em;
+    top: 0;
+}
+
+.modal-radio .label{
+    text-align: center;
+    flex: 1;
+    font-size: 14px;
+    transition: color .3s linear;
+    color: var(--text-04);
+}
+
+.modal-radio.checked .label{
+    color: var(--text-01);
+}
+
+.button-cancel{
+    background-color: var(--cancel);
+    color: var(--text-01);
+}
+
+.modal-footer>button{
+    font-family: SpoqaHanSansNeo, Apple SD Gothic Neo, Malgun Gothic, sans-serif;
+    border: 0;
+    letter-spacing: -.6px;
+    overflow: hidden;
+    width: 100%;
+    transition: background-color .2s linear, border-color .2s linear, color .2s linear;
+    height: 56px;
+    font-size: 16px;
+    padding: 0 24px;
+}
+
+.button-cancel span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-footer>button>*{
+    position: relative;
+    z-index: 1;
+}
+
+.button-primary{
+    background-color: var(--primary);
+    color: #242424;
+}
+/* // 검색 정렬 모달창 */
