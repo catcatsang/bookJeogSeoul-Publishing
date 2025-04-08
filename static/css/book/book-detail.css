@@ -1,0 +1,380 @@
+* {
+    letter-spacing: -.6px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+    border-style: none;
+    pointer-events: none;
+}
+
+b, em, strong {
+    font-weight: 700;
+}
+
+#wrap{
+    height: 100%;
+}
+
+@media (max-width: 999px) {
+    #wrap{
+        padding-bottom: 50px;
+    }
+}
+
+/* 상단 이벤트 배너 */
+.book-detail-banner{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.home-banner{
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 44px;
+    background: #96ea77;
+    z-index: 50;
+    bottom: auto;
+    position: sticky;
+}
+
+.home-banner a{
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #242424;
+}
+
+.home-banner a p{
+    font-size: 16px;
+    background: url(https://d3udu241ivsax2.cloudfront.net/v3/images/home/banner-arr.60cff0f5defc75c236571b69c8c355e0.png) 0 0 no-repeat;
+    background-size: 16px;
+    background-position: 100%;
+    padding-right: 16px;
+}
+/* // 상단 이벤트 배너 */
+
+@media (min-width: 1000px) {
+    #wrap.show-top-header .content {
+        user-select: none;
+    }
+}
+
+.book-detail-container{
+    line-height: 1.6;
+    min-height: calc(100vh - 65px);
+}
+
+@media (min-width: 960px) {
+    .book-detail-container {
+        max-width: var(--book-detail-width);
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1280px) {
+    .book-detail-container {
+        max-width: var(--book-detail-width);
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1440px) {
+    .book-detail-container {
+        max-width: var(--book-detail-width);
+        margin: 0 auto;
+        border: 1px solid var(--GTrans-02);
+        border-width: 0 1px;
+    }
+}
+
+.book-detail-info{
+    margin-top: -48px;
+}
+
+@media (min-width: 960px) {
+    .book-detail-container .book-detail-info {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1000px) {
+    .book-detail-container .book-detail-info {
+        margin-top: 0;
+    }
+}
+
+.book-cover-frame{
+    position: relative;
+    width: 100%;
+    border-bottom: 4px solid var(--ui-02);
+}
+
+@media (min-width: 960px) {
+    .book-cover-frame{
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        padding: 24px;
+    }
+}
+
+/* 책 이미지 영역 */
+.book-cover-frame .book-cover-box{
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    will-change: transform;
+}
+
+@media (min-width: 960px) {
+    .book-cover-frame .book-cover-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        width: 371px;
+        height: 432px;
+        border-radius: 12px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .book-cover-frame .book-cover-box{
+        width: 503px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .book-cover-frame .book-cover-box{
+        width: 571px;
+    }
+}
+
+@media (max-width: 959px) {
+    .book-cover-frame .book-cover-box{
+        overflow: visible;
+        position: static;
+        padding: 68px 0 32px;
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 959px) {
+    .book-cover-frame .book-cover-box .book-cover-inner-box{
+        position: relative;
+        z-index: 50;
+        width: 100%;
+        min-height: 200px;
+        padding-top: 24px;
+    }
+}
+
+.book-cover-frame .book-cover-info{
+    position: relative;
+    z-index: 1;
+    background-color: var(--ui-background);
+}
+
+@media (min-width: 960px) {
+    .book-cover-frame .book-cover-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        align-self: stretch;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 959px) {
+    .book-cover-frame .book-cover-info{
+        z-index: 50;
+        padding: 32px 24px 24px;
+        border-radius: 24px 24px 0 0;
+    }
+}
+
+.book-cover-frame .book-cover-box .background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 644px;
+    background: var(--ui-02);
+}
+
+@media (max-width: 959px) {
+.book-cover-frame .book-cover-box .background{
+        height: calc(100% + 24px);
+    }
+}
+
+.book-cover-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-cover-container .thumbnail{
+    position: relative;
+    background-color: var(--ui-05);
+    border-radius: 0 6px 6px 0;
+    z-index: 2;
+    width: 160px;
+}
+
+@media (max-width: 959px) {
+    .book-cover-container .thumbnail{
+        margin-top: 16px;
+    }
+}
+
+.book-cover-container .thumbnail .inner{
+    overflow: hidden;
+    position: relative;
+    min-width: 160px;
+    box-shadow: 12px 8px 24px rgba(0, 0, 0, .2), 4px 8px 8px rgba(0, 0, 0, .1), 0 0 2px rgba(0, 0, 0, .24);
+    border-radius: 0 6px 6px 0;
+}
+
+.book-cover-container .thumbnail .inner::before{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 20px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, .05), rgba(0, 0, 0, .05) .01%, rgba(0, 0, 0, .05) 5.97%, hsla(0, 0%, 100%, .3) 15.89%, hsla(0, 0%, 100%, 0) 28.19%, rgba(0, 0, 0, .05) 0, rgba(0, 0, 0, .0277927) 46.96%, hsla(0, 0%, 100%, 0) 47.51%, hsla(0, 0%, 100%, .1) 54.14%, hsla(0, 0%, 100%, 0));
+    content: "";
+}
+
+.inner .book-picture{
+    overflow: hidden;
+    position: relative;
+    padding-top: 0;
+    max-height: unset;
+}
+
+.book-picture picture,
+.background-cover picture
+{
+    transition: opacity .7s;
+    position: static;
+    opacity: 1;
+}
+
+.book-picture picture img,
+.background-cover picture img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.book-cover-frame .background 
+.background-cover{
+    overflow: hidden;
+    position: relative;
+    padding-top: 0;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    opacity: .35;
+    will-change: opacity;
+}
+
+.book-cover-frame .background .dim{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(176, 179, 188, .1);
+    backdrop-filter: blur(20px);
+}
+
+.book-cover-frame .background 
+.background-cover img{
+    object-fit: cover;
+}
+/* // 책 이미지 영역 */
+
+/* 책 제목 영역 */
+.book-cover-info {
+    position: relative;
+    z-index: 1;
+    background-color: var(--ui-background);
+}
+
+@media (min-width: 960px) {
+    .book-cover-frame .book-cover-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        align-self: stretch;
+        border-radius: 12px;
+    }
+}
+
+@media (min-width: 960px) {
+    .book-cover-frame .book-cover-info .book-cover-info-box{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 32px;
+        border: 1px solid var(--GTrans-03);
+        border-bottom: 0;
+        border-radius: 12px 12px 0 0;
+    }
+}
+
+.book-cover-frame .book-cover-info .book-cover-info-btns{
+    display: flex;
+}
+
+@media (min-width: 960px) {
+    .book-cover-frame .book-cover-info .book-cover-info-btns{
+        align-items: center;
+    }
+}
+
+@media (max-width: 959px) {
+    .book-cover-frame .book-cover-info .book-cover-info-btns{
+        flex-direction: row-reverse;
+        position: fixed;
+        bottom: 50px;
+        left: 0;
+        bottom: calc(env(safe-area-inset-bottom) + 50px);
+        z-index: 99;
+        width: 100%;
+        padding: 12px;
+        transform: none;
+        border-top: 1px solid var(--GTrans-03);
+        background: var(--ui-background);
+    }
+}
+/* // 책 제목 영역 */
