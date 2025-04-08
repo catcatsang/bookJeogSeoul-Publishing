@@ -813,6 +813,15 @@ li {
     content: "";
 }
 
+.popup-contents li label {
+    display: flex;
+    justify-content: center;
+}
+
+.mds-radio:has(input[type=radio]:checked)  {
+    border-color: var(--text-01);
+}
+
 .mds-textarea {
     overflow: hidden;
     display: inline-block;

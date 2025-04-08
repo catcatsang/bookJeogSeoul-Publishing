@@ -32,3 +32,5 @@ modalCloseButton.addEventListener("click",() => {
 modalConfirmButton.addEventListener('click', () => {
     filterModal.style.display = "none";
 })
+
+

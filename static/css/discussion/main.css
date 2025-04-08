@@ -736,14 +736,23 @@ html:not(.ie) .slide-container .slide-wrapper {
     padding: 4px;
 }
 
+.popup-contents li label {
+    display: flex;
+    justify-content: center;
+}
+
 .mds-radio {
     display: inline-block;
     vertical-align: top;
     cursor: pointer;
 }
 
+.mds-radio:has(input[type=radio]:checked)  {
+    border-color: var(--text-01);
+}
+
 .mds-radio.mds-radio--button {
-    width: 120px;
+    /* width: 120px; */
     height: 48px;
     border: 1px solid var(--ui-06);
     border-radius: 8px;

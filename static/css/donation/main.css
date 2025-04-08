@@ -657,7 +657,7 @@ html:not(.ie) .slide-container .slide-wrapper {
 }
 
 .mds-radio.mds-radio--button {
-    width: 120px;
+    /* width: 120px; */
     height: 48px;
     border: 1px solid var(--ui-06);
     border-radius: 8px;
