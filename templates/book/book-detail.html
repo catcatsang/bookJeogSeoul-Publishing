@@ -123,7 +123,11 @@
                     <div id="backComponent" class="back-component">
                         <div class="back line">
                             <!-- 뒤로가기 버튼 -->
-                            <button type="button" class="close-button">
+                            <button
+                                type="button"
+                                onclick="history.back()"
+                                class="close-button"
+                            >
                                 <i class="mds-icon-arrow-left"></i>
                             </button>
                             <!-- // 뒤로가기 버튼 -->
@@ -260,13 +264,21 @@
                             <div id="anchorRecommend" class="book-tab-frm">
                                 <div class="mds-tab mds-tab-line">
                                     <ul role="menu" class="mds-tab-wrapper">
-                                        <li class="mds-tab-item">
-                                            <a role="menuitem">
+                                        <li
+                                            class="mds-tab-item"
+                                            data-target="intro"
+                                        >
+                                            <a role="menuitem" href="#intro">
                                                 <span>책 소개</span>
                                             </a>
                                         </li>
-                                        <li class="mds-tab-item">
-                                            <a role="menuitem"
+                                        <li
+                                            class="mds-tab-item"
+                                            data-target="anchorReport"
+                                        >
+                                            <a
+                                                role="menuitem"
+                                                href="#anchorReport"
                                                 ><span>독후감</span></a
                                             >
                                         </li>
@@ -279,7 +291,7 @@
                                 id="anchorIntro"
                                 class="book-container book-info"
                             >
-                                <div class="introduction section">
+                                <div class="introduction section" id="intro">
                                     <h3 class="book-info-title">책 소개</h3>
                                     <div class="book-info-more-cont more-text">
                                         <div

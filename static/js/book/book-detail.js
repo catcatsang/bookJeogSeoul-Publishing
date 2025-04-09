@@ -36,49 +36,69 @@ mobileScrapButton.addEventListener("click", (e) => {
 });
 
 // 현재 nav에 맞춰 동적으로 이동하는 밑줄 span
-
 const tabItems = document.querySelectorAll(".mds-tab-item");
 const tabBar = document.querySelector(".mds-tab-bar");
 
-// 밑줄 위치 및 너비 업데이트 함수
+// 밑줄 위치 및 active 클래스 설정 함수
 function updateTabBar(targetItem) {
-    const textSpan = targetItem.querySelector("span"); // 클릭된 탭 안의 span 요소
-    const textRect = textSpan.getBoundingClientRect(); // span의 위치와 크기 정보
-    const parentRect = targetItem.parentElement.getBoundingClientRect(); // 부모 요소(.mds-tab-wrapper)의 위치
+    const textSpan = targetItem.querySelector("span"); // 현재 탭 내부의 span 요소
+    const textRect = textSpan.getBoundingClientRect(); // 현재 탭 내부의 span 요소의 위치와 크기를 가져옴
+    const parentRect = targetItem.parentElement.getBoundingClientRect(); // 탭 전체(wrapper)의 위치와 크기를 가져옴
 
-    const width = textRect.width; // 글씨의 너비
-    const offsetLeft = textRect.left - parentRect.left; // 글씨의 왼쪽 위치를 부모 기준으로 계산
+    // span 글자의 너비만큼 밑줄의 길이를 설정
+    const width = textRect.width;
 
-    // 밑줄의 길이와 위치를 설정
+    // .mds-tab-wrapper를 기준으로 span의 왼쪽 위치를 계산
+    // → 밑줄이 정확히 글자 아래로 오게 하기 위해 필요
+    const offsetLeft = textRect.left - parentRect.left;
+
+    // 밑줄의 width와 위치(translateX)를 적용
     tabBar.style.width = `${width}px`;
     tabBar.style.transform = `translate3d(${offsetLeft}px, 0, 0)`;
+
+    // 모든 탭에서 active 제거 후 현재 span에 추가
+    tabItems.forEach((item) => {
+        item.querySelector("span").classList.remove("active");
+    });
+    textSpan.classList.add("active");
 }
 
-// 탭 클릭 시 이벤트 설정
+// 클릭 시 처리
 tabItems.forEach((item) => {
     item.addEventListener("click", () => {
-        // 기존에 선택된 탭의 active 클래스 제거
-        tabItems.forEach((i) => i.classList.remove("active"));
-
-        // 현재 클릭된 탭에 active 클래스 추가
-        item.classList.add("active");
-
-        // 클릭한 탭에 맞춰 밑줄 이동
         updateTabBar(item);
     });
 });
 
-// 페이지 로드시 첫 번째 탭에 맞춰 밑줄 초기 위치 설정
-window.addEventListener("load", () => {
-    updateTabBar(tabItems[0]);
-    tabItems[0].classList.add("active"); // 첫 번째 탭 활성화
+// 스크롤 시 섹션에 맞는 탭으로 업데이트
+window.addEventListener("scroll", () => {
+    tabItems.forEach((item) => {
+        const targetId = item.dataset.target;
+        const section = document.getElementById(targetId);
+        if (!section) return;
+
+        const rect = section.getBoundingClientRect();
+        if (
+            rect.top < window.innerHeight / 2 &&
+            rect.bottom > window.innerHeight / 2
+        ) {
+            updateTabBar(item);
+        }
+    });
 });
 
-// 창 크기 변경 시에도 밑줄 위치 재계산 (반응형 대응)
+// 로드 시 초기화
+window.addEventListener("load", () => {
+    updateTabBar(tabItems[0]);
+});
+
+// 크기 조정 시에도 위치 재조정
 window.addEventListener("resize", () => {
-    const activeTab =
-        document.querySelector(".mds-tab-item.active") || tabItems[0];
-    updateTabBar(activeTab);
+    const activeItem =
+        [...tabItems].find((item) =>
+            item.querySelector("span").classList.contains("active")
+        ) || tabItems[0];
+    updateTabBar(activeItem);
 });
 
 // 책 소개의 더보기 버튼을 누르면 더보기 버튼이 텍스트가 바뀌고 hidden 클래스가 사라짐

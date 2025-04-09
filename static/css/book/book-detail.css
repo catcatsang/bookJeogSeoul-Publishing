@@ -808,6 +808,7 @@ span .hidden-text{
 /* 중간 네비게이션 영역 */
 .book-tab-frm{
     position: sticky;
+    top: 64px;
     z-index: 49;
     width: 100%;
     border-bottom: 1px solid var(--ui-06);
@@ -857,6 +858,10 @@ span .hidden-text{
     justify-content: center;
     position: relative;
     height: 100%;
+}
+
+.mds-tab-item a span.active{
+    font-weight: 700;
 }
 
 .mds-tab-bar{
