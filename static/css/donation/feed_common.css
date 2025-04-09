@@ -741,6 +741,13 @@ li {
     content: "\e820";
 }
 
+.mds-icon--clip:before {
+    content: "\e829";
+}
+
+.mds-icon--comment:before {
+    content: "\e838";
+}
 .mds-button {
     overflow: hidden;
     width: 100%;
@@ -802,12 +809,18 @@ li {
     color: var(--secondary);
 }
 
+.mds-button.mds-button--line {
+    position: relative;
+    background-color: transparent;
+    border: 1px solid;
+}
+
 .mds-button.mds-button--line:before {
-    /* position: absolute;
+    position: absolute;
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0; */
+    bottom: 0;
     opacity: .1;
     transition: background-color .2s linear;
     content: "";
