@@ -250,7 +250,14 @@ img {
     }
 }
 
-.top-header header .util-wrap .alarm-btn{
+.top-header header .util-wrap{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 16px;
+}
+
+.top-header header .util-wrap .alarm-button{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -262,7 +269,7 @@ img {
 }
 
 @media (min-width: 1000px){
-    .top-header header .util-wrap .alarm-btn::after{
+    .top-header header .util-wrap .alarm-button::after{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -289,12 +296,44 @@ img {
     letter-spacing: -.6px;
 }
 
-[class*=" mds-icon"]:before, [class^=mds-icon]:before {
+[class*="mds-icon"]:before, [class^=mds-icon]:before {
     font-family: icon;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-.mds-icon-alarm:before {
-    content: "\e856";
+@media (min-width: 1000px){
+    .mds-icon-alarm:before {
+        content: "\e856";
+    }
+}
+
+.ir{
+    position: absolute;
+    left: -10000em;
+    top: 0;
+}
+
+.top-header header .util-wrap>ul{
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+
+@media (max-width: 999px) {
+    .top-header header .util-wrap ul.util{
+        display: none;
+    }
+}
+
+.top-header header ul.util .sign-in a{
+    background: var(--ui-09);
+    width: 80px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--tertiary);
+    border-radius: 4px;
+    font-size: 12px;
 }

@@ -94,10 +94,24 @@
                             </ul>
                         </nav>
                         <div class="util-wrap">
-                            <a href="" class="alarm-button">
-                                <span class="mds-icon-alarm"></span>
+                            <!-- data-count가 알람 개수 -->
+                            <a
+                                href=""
+                                class="alarm-button"
+                                data-content-type="alarmCenter"
+                                data-count="10"
+                            >
+                                <span class="mds-icon-alarm">
+                                    <span class="ir">알림센터</span>
+                                </span>
                             </a>
-                            <ul class="util"></ul>
+                            <ul class="util">
+                                <li class="sign sign-in">
+                                    <a href="" data-content-type="login"
+                                        >로그아웃</a
+                                    >
+                                </li>
+                            </ul>
                         </div>
                     </header>
                 </div>
@@ -150,13 +164,79 @@
                             </div>
                             <!-- // 책 이미지 영역 -->
                             <div class="book-cover-info">
-                                <div class="book-cover-info-box"></div>
-                                <div class="book-cover-info-btns"></div>
+                                <div class="book-cover-info-box">
+                                    <div class="book-cover-info-box-body">
+                                        <div>
+                                            <p class="book-cover-info-title">
+                                                용의자 X의 헌신
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p class="book-cover-info-athor">
+                                                히가시노 게이고
+                                            </p>
+                                            <p class="book-cover-info-text">
+                                                <span>재인</span>
+                                                <span class="middot"></span>
+                                                2022.06.16
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="book-cover-info-box-footer">
+                                        <div class="book-cover-footer-count">
+                                            이 책이 담긴 서재
+                                            <b>538+</b>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="book-cover-info-btns">
+                                    <button
+                                        type="button"
+                                        class="button-report mds-button"
+                                    >
+                                        <span
+                                            ><i class="mds-icon-write"></i>
+                                            <span>&nbsp;&nbsp;독후감 작성</span>
+                                        </span>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="button-discussion mds-button"
+                                    >
+                                        <span>
+                                            <i class="mds-icon-discussion"></i>
+                                            토론방&nbsp;
+                                            <span class="hidden-text"
+                                                >이동</span
+                                            >
+                                        </span>
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="button-scrap mds-button"
+                                    >
+                                        <span
+                                            ><i class="mds-icon-scrap"></i>
+                                        </span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- // 책 정보 영역 -->
-                    <div class="book-detail-content"></div>
+                    <div class="book-detail-content-cont">
+                        <div class="book-detail-content-frm">
+                            <div id="anchorRecommend" class="book-tab-frm">
+                                <div class="mds-tab mds-tab-line">
+                                    <ul
+                                        role="menu"
+                                        class="mds-tab-wrapper"
+                                    ></ul>
+                                    <span class="mds-tab-bar transition"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
