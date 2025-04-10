@@ -223,9 +223,131 @@ button, input {
     padding: 24px 16px 16px;
     margin-left: 16px;
     display: -ms-flexbox;
-    display: flex
-;
+    display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
+}
+
+.sub-inner.post-content .post-list li{
+    width: calc(50% - 12px);
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 24px;
+    height: 211px;
+}
+
+@media (max-width: 999px) {
+    .sub-inner.post-content .post-list li{
+        height: 235px;
+    }
+}
+
+@media (max-width: 700px) {
+    .sub-inner.post-content .post-list li{
+        width: 100%;
+    }
+}
+
+.sub-inner.post-content .post-list li:nth-child(odd) {
+    margin-right: 12px;
+}
+
+@media (max-width: 700px) {
+    .sub-inner.post-content .post-list li:nth-child(odd) {
+        margin-right: 0;
+    }
+}
+
+.post-list .post-cont{
+    display: block;
+    padding-bottom: 16px;
+}
+
+.post-list .post-cont .title{
+    font-weight: 700;
+    font-size: 16px;
+    -webkit-line-clamp: 1;
+    max-height: 1.35em;
+    margin-bottom: 8px;
+}
+
+.post-list .post-cont .cont, .post-list .post-cont .title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    color: black;
+}
+
+.post-list .profile{
+    border-top: 1px solid var(--ui-06);
+    padding-top: 16px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+.post-list .profile .inner{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.post-list .profile .image{
+    min-width: 36px;
+    height: 36px;
+    border-radius: 100px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .25);
+    display: block;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-right: 8px;
+}
+
+.post-list .profile .name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    max-height: 1.5em;
+    color: var(--text-02);
+    font-size: 12px;
+}
+
+.post-list .profile button{
+    min-width: 68px;
+    min-height: 32px;
+    height: 100%;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-left: 12px;
+    background-color: var(--secondary);
+    color: var(--ui-background);
+}
+
+.post-list .post-cont .cont{
+    color: var(--text-02);
+    font-size: 14px;
+    line-height: 24px;
+    -webkit-line-clamp: 5;
+    max-height: 6.75em;
+    max-height: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    max-height: 73px;
 }
 /* // 독후감 목록 */

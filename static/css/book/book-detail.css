@@ -816,6 +816,12 @@ span .hidden-text{
     will-change: scroll-position;
 }
 
+@media (max-width: 959px) {
+    .book-tab-frm{
+        top: 0 !important;
+    }
+}
+
 @media (min-width: 960px) {
     .book-detail-content-cont .book-detail-content-frm{
         top: 65px
