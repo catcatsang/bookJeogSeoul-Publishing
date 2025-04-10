@@ -6,7 +6,7 @@ const idLabel = document.querySelector(".input-label-id");
 const clearBtn = document.querySelector("#clear-button-id");
 
 inputId.addEventListener("focus", () => {
-    idLabel.style.borderColor = "rgba(0, 221, 109)";
+    idLabel.style.borderColor = "rgba(51, 51, 51)";
     if (inputId.value.length > 0) {
         clearBtn.style.display = "block";
     } else {
@@ -39,7 +39,7 @@ const pwLabel = document.querySelector(".input-label-pw");
 const cleartBtnPw = document.querySelector("#clear-button-pw");
 
 inputPw.addEventListener("focus", () => {
-    pwLabel.style.borderColor = "rgba(0, 221, 109)";
+    pwLabel.style.borderColor = "rgba(51, 51, 51)";
     if (inputPw.value.length > 0) {
         cleartBtnPw.style.display = "block";
     } else {
@@ -71,7 +71,7 @@ cleartBtnPw.addEventListener("mousedown", (e) => {
 const loginBtn = document.querySelector("#login-btn");
 
 const activeLoginBtn = () => {
-    if (inputId.value.length > 0 && inputPw.value.length > 0) {
+    if (inputId.value.length > 0 && inputPw.value.length > 6) {
         loginBtn.style.opacity = "1";
         loginBtn.style.cursor = "pointer";
     } else {
@@ -85,14 +85,10 @@ inputPw.addEventListener("input", activeLoginBtn);
 // 모달 테스트
 // 모달 창을 띄우기 위한 코드
 // 안쓸거면 주석 하면됨
-const modal = document.querySelector(".modal");
+const modal = document.querySelector("#modal");
 const modalCloseBtn = document.querySelector(
     "#modal-wrap > .modal-footer > button"
 );
-const modalHeader = document.querySelector(".modal-header > strong");
-const modalBody = document.querySelector(".modal-body > p");
-console.log(modalHeader);
-console.log(modalBody);
 
 modalCloseBtn.addEventListener("click", () => {
     modal.classList.add("fade-out");
