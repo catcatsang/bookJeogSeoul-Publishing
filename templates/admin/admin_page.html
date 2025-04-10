@@ -10,10 +10,7 @@
         <link rel="stylesheet" href="../../static/css/admin/main.css" />
         <link rel="stylesheet" href="../../static/css/admin/media.css" />
         <link rel="stylesheet" href="../../static/css/admin/report_modal.css" />
-        <link
-            rel="stylesheet"
-            href="../../static/css/admin/member.css"
-        />
+        <link rel="stylesheet" href="../../static/css/admin/member.css"/>
         <link rel="stylesheet" href="/static/css/admin/book_post.css">
         <link rel="stylesheet" href="/static/css/admin/bookpost_report.css">
         <link rel="stylesheet" href="/static/css/admin/comment_report.css">
@@ -25,6 +22,7 @@
         <link rel="stylesheet" href="/static/css/admin/sponsor_inquiry.css">
         <link rel="stylesheet" href="/static/css/admin/sponsorship.css">
         <link rel="stylesheet" href="/static/css/admin/top_post.css">
+        <link rel="stylesheet" href="/static/css/admin/discussion.css">
         <link rel="stylesheet" href="/static/css/admin/common_modal.css">
         <link
             rel="stylesheet"
@@ -135,6 +133,33 @@
                                                 class="submenu-item top-post-link"
                                                 href="#"
                                                 >이달의 독후감 후보</a
+                                            >
+                                        </div>
+                                    </div>
+                                    <!-- 토론게시판 섹션 -->
+                                    <div class="menu-section">
+                                        <a class="menu-item menu-has-submenu">
+                                            <span class="menu-label">
+                                                <img
+                                                    src="../../static/images/admin/공고.svg"
+                                                    alt="공고관리"
+                                                    class="menu-icon"
+                                                    width="16"
+                                                    height="16"
+                                                />
+                                            토론방 관리
+                                                <img
+                                                    src="../../static/images/admin/arrow.svg"
+                                                    class="arrow-icon menu-arrow"
+                                                    alt="메뉴 화살표"
+                                                />
+                                            </span>
+                                        </a>
+                                        <div class="submenu-container">
+                                            <a
+                                                class="submenu-item discussion-link"
+                                                href="#"
+                                                >토론 목록</a
                                             >
                                         </div>
                                     </div>
@@ -410,7 +435,29 @@
                                                                     </a>
                                                                 </div>
                                                             </li>
-
+                                                            <li
+                                                                class="menu-card menu-member"
+                                                            >
+                                                                <div
+                                                                    class="menu-content"
+                                                                >
+                                                                    <div
+                                                                        class="menu-name"
+                                                                    >
+                                                                        토론방 관리
+                                                                    </div>
+                                                                    
+                                                                    <a
+                                                                        class="menu-btn discussion-link"
+                                                                        href="#"
+                                                                    >
+                                                                    
+                                                                        <span
+                                                                            >바로가기</span
+                                                                        >
+                                                                    </a>
+                                                                </div>
+                                                            </li>
                                                             <li
                                                                 class="menu-card menu-member"
                                                             >
@@ -750,7 +797,6 @@
                                             <th>작성일시</th>
                                             <th>수정일시</th>
                                             <th>좋아요</th>
-                                            <th>득표수</th>
                                             <th>추천도서여부</th>
                                             <th>독후감관리</th>
                                         </tr>
@@ -764,7 +810,6 @@
                                             <td>2025-01-15</td>
                                             <td>2025-02-10</td>
                                             <td>1000</td>
-                                            <td>50</td>
                                             <td>
                                                 <span class="status active"
                                                     >활성</span
@@ -855,6 +900,97 @@
                                             <td>고독함의 본질적인 결함은 고독함을 이해하지 못함.고독함의 본질적인 결함은 고독함을 이해하지 못함.</td>
                                             <td>차라투스트라는 이렇게 말했다.</td>
                                             <td>2025-01-15</td>
+                                            <td>2025-02-10</td>
+                                            <td>1000</td>
+                                            <td>50</td>
+                                            <td>
+                                                <span class="status active"
+                                                    >활성</span
+                                                >
+                                            </td>
+                                            <td>
+                                                <button
+                                                    type="button"
+                                                    class="detail-btn"
+                                                >
+                                                    상세보기
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>  
+                        </div>
+                        <!-- 토론방 컨텐츠 -->
+                        <div class="discussion-management" style="display: none">
+                            <!-- 상단 검색/필터 영역 -->
+                            <div
+                                class="discussion-search-filter-container discussion-filter"
+                            >
+                                <div class="search-box discussion-search">
+                                    <input
+                                        type="text"
+                                        placeholder="검색어를 입력하세요"
+                                        class="search-input discussion-search-input"
+                                    />
+                                    <button
+                                        type="button"
+                                        class="search-btn discussion-search-btn"
+                                    >
+                                        검색
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="search-btn open-new-discussion-btn"
+                                    >
+                                        토론 주제 생성하기
+                                    </button>
+                                </div>
+                                <div class="filter-box discussion-filter-box">
+                                    <select
+                                        class="status-filter discussion-status-filter"
+                                    >
+                                        <option value="all">전체</option>
+                                        <option value="pending">심사중</option>
+                                        <option value="hold">보류</option>
+                                        <option value="approved">승인</option>
+                                        <option value="rejected">반려</option>
+                                    </select>
+                                    <select
+                                        class="date-filter discussion-date-filter"
+                                    >
+                                        <option value="week">최근 1주일</option>
+                                        <option value="month">
+                                            최근 1개월
+                                        </option>
+                                        <option value="three-month">
+                                            최근 3개월
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- 공고 목록 테이블 -->
+                            <div class="discussion-table-container">
+                                <table class="discussion-table">
+                                    <thead>
+                                        <tr>
+                                            <th>토론번호</th>
+                                            <th>토론주제</th>
+                                            <th>연결도서</th>
+                                            <th>작성일시</th>
+                                            <th>좋아요</th>
+                                            <th>댓글수</th>
+                                            <th>추천도서여부</th>
+                                            <th>토론관리</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- 샘플 데이터 -->
+                                        <tr>
+                                            <td>0000001</td>
+                                            <td>이 곳에는 토론 주제가 나올 예정입니다! 더미데이터용이므로, 나중에는 서버에 맞게 적용</td>
+                                            <td>서버담당자는 이렇게 말했다.</td>
                                             <td>2025-02-10</td>
                                             <td>1000</td>
                                             <td>50</td>

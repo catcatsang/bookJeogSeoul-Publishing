@@ -703,3 +703,295 @@ li {
     top: 0;
 }
 
+[class*=" mds-"], [class^=mds-] {
+    font-family: SpoqaHanSansNeo, Apple SD Gothic Neo, Malgun Gothic, sans-serif;
+    border: 0;
+    letter-spacing: -.6px;
+}
+
+[class*=" mds-icon"]:before, [class^=mds-icon]:before {
+    font-family: icon;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.mds-icon--alarm-2:before {
+    content: "\e856";
+}
+
+.mds-icon--filter:before {
+    margin-left: 5px;
+    content: "\e803";
+}
+
+.mds-icon--add-post:before {
+    margin-left: 5px;
+    content: "\e800";
+}
+
+.mds-icon--arrow-left:before {
+    content: "\e804";
+}
+
+.mds-icon--add-shelf:before {
+    content: "\e802";
+}
+
+.mds-icon--heart-1:before {
+    content: "\e820";
+}
+
+.mds-icon--clip:before {
+    content: "\e829";
+}
+
+.mds-icon--comment:before {
+    content: "\e838";
+}
+.mds-button {
+    overflow: hidden;
+    width: 100%;
+    transition: background-color .2s linear,border-color .2s linear,color .2s linear;
+}
+
+.mds-button.mds-button--cancel {
+    background-color: var(--cancel);
+    color: var(--text-01);
+}
+
+.mds-button.mds-button--h56 {
+    height: 56px;
+    font-size: 16px;
+    padding: 0 24px;
+}
+
+.mds-button.mds-button--h32 {
+    height: 32px;
+    font-size: 12px;
+    padding: 0 12px;
+}
+
+.mds-button.mds-button--r4 {
+    border-radius: 4px;
+}
+
+.mds-button>* {
+    position: relative;
+    z-index: 1;
+}
+
+.mds-button span {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.mds-dialog.mds-dialog--action .mds-dialog--footer.mds-dialog--ratio :last-child {
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+}
+
+.mds-button.mds-button--primary {
+    background-color: rgb(0, 221, 109);
+    color: white;
+}
+
+.mds-button.mds-button--secondary {
+    background-color: var(--secondary);
+    color: var(--ui-background);
+}
+
+.mds-button.mds-button--secondary.mds-button--line {
+    border-color: var(--secondary);
+    color: var(--secondary);
+}
+
+.mds-button.mds-button--line {
+    position: relative;
+    background-color: transparent;
+    border: 1px solid;
+}
+
+.mds-button.mds-button--line:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: .1;
+    transition: background-color .2s linear;
+    content: "";
+}
+
+.popup-contents li label {
+    display: flex;
+    justify-content: center;
+}
+
+.mds-radio:has(input[type=radio]:checked)  {
+    border-color: var(--text-01);
+}
+
+.mds-textarea {
+    overflow: hidden;
+    display: inline-block;
+    width: 327px;
+    height: 128px;
+}
+
+.mds-textarea {
+    width: 100%;
+    -ms-flex-preferred-size: 56px;
+    flex-basis: 56px;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.mds-textarea {
+    height: 146px;
+}
+
+.mds-textarea textarea {
+    -ms-flex: 1;
+    flex: 1;
+    overflow-y: auto;
+    width: 100%;
+    border: 0;
+    font-size: 16px;
+    color: var(--text-01);
+    resize: none;
+    background: var(--ui-background);
+}
+
+.mds-textarea textarea {
+    line-height: 24px;
+}
+
+.mds-textarea .inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+}
+
+.mds-textarea .label {
+    display: block;
+    margin-bottom: 1px;
+    font-size: 10px;
+    color: var(--text-04);
+}
+
+.mds-textarea label {
+    -ms-flex: 1;
+    flex: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.mds-textarea label {
+    height: 100%;
+}
+
+.mds-textarea:not(.mds-textarea--editor) label {
+    border-color: var(--ui-06);
+    border-radius: 4px;
+}
+
+.mds-textarea textarea:focus {
+    outline: 0;
+    
+}
+
+.mds-textarea:not(.mds-textarea--editor).textarea-focus label {
+    border-color: var(--ui-08);
+}   
+
+.mds-textarea .message-wrap {
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 2px 8px 0;
+}
+
+.mds-textarea .message-wrap span {
+    font-size: 12px;
+    color: var(--text-04);
+}
+
+.mds-textarea .message-wrap .length {
+    margin-left: auto;
+}
+
+.mds-input>label {
+    display: block;
+    height: 56px;
+    padding: 8px 12px;
+    border: 1px solid;
+}
+
+.mds-input:not(.mds-input--editor) label {
+    border-color: var(--ui-06);
+    border-radius: 4px;
+}
+
+/* .post-write .mds-input:not(.mds-input--editor) label {
+    border: none;
+} */
+
+.images .mds-input.memo label {
+    border: 1px solid var(--ui-06);
+}
+
+.mds-input {
+    overflow: hidden;
+}
+
+
+.mds-input .inner {
+    height: 100%;
+    gap: 8px;
+}
+
+.mds-input .inner, .mds-input .mds-icon--searchbar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.mds-input .input {
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.mds-input input {
+    width: 100%;
+    height: 24px;
+    font-size: 16px;
+    text-align: left;
+    color: var(--text-01);
+}
+
+.mds-input .clear-button {
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    display: none;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+
