@@ -741,6 +741,11 @@ li {
     content: "\e820";
 }
 
+.mds-icon--x:before {
+    font-family: icon;
+    content: "\e826";
+}
+
 .mds-icon--clip:before {
     content: "\e829";
 }
@@ -802,6 +807,11 @@ li {
 .mds-button.mds-button--secondary {
     background-color: var(--secondary);
     color: var(--ui-background);
+}
+
+.mds-button.mds-button--danger {
+    background-color: var(--danger);
+    color: #fff;
 }
 
 .mds-button.mds-button--secondary.mds-button--line {

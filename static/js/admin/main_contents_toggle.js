@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
     sonpsorInquiry : document.querySelectorAll(".sponsor-inquiry-management"),
     commentReport : document.querySelectorAll(".comment-report-management"),
     bookPostReport : document.querySelectorAll(".book-post-report-management"),
-    topPost : document.querySelectorAll(".top-post-management")
+    topPost : document.querySelectorAll(".top-post-management"),
+    discussion : document.querySelectorAll(".discussion-management")
   };
 
   // 로고 버튼 요소 - 홈으로 돌아가는 기능을 담당
@@ -65,7 +66,8 @@ document.addEventListener("DOMContentLoaded", function () {
     sonpsorInquiry : document.querySelectorAll(".sponsor-inquiry-link"),
     commentReport : document.querySelectorAll(".comment-report-link"),
     bookPostReport : document.querySelectorAll(".book-post-report-link"),
-    topPost : document.querySelectorAll(".top-post-link")
+    topPost : document.querySelectorAll(".top-post-link"),
+    discussion : document.querySelectorAll(".discussion-link")
   };
 
   /**

@@ -20,37 +20,6 @@ commentButton.addEventListener('click', ( ) => {
 })
 
 
-const giveBookMarkButton = document.querySelector(".like-btn")
-const bookMarkModal = document.querySelector(".unload-popup")
-const closeBookMarkModal = document.querySelector(".close")
-
-giveBookMarkButton.addEventListener('click',() => {
-    document.body.style.overflow = "hidden";
-    document.documentElement.style.overflow = "hidden";
-    bookMarkModal.removeAttribute("style")
-})
-
-closeBookMarkModal.addEventListener('click',() =>{
-    document.body.style.overflow = "";
-    document.documentElement.style.overflow = "";
-    bookMarkModal.style.display = "none"
-})
-
-const bookMarkInput = document.querySelector(".dialog-content");
-
-bookMarkInput.addEventListener('input',() =>{
-    let numberLength = bookMarkInput.value.length;
-    let numberValue = bookMarkInput.value;
-    console.log(numberLength)
-    console.log(numberValue)
-    if(numberLength > 12){
-        bookMarkInput.value = bookMarkInput.value.slice(0,12);
-    }
-    if(numberValue > 6000){
-        alert("최대 6000개까지만 줄 수 있습니다.")
-        bookMarkInput.value = 6000
-    }
-})
 
 
 const imageModal = document.querySelector(".full-image")

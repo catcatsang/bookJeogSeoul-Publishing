@@ -227,3 +227,16 @@ publishButton.addEventListener('click',()=>{
     }
 })
     
+const alertModal = document.querySelector(".unload-popup"); // 뒤로 가기 누를 시 나오는 모달
+const backModalOpen = document.querySelector(".back-btn"); // 뒤로 가기 버튼
+const closeAlertModal = document.querySelector(".close"); // 모달창의 취소 버튼
+const applyButton = document.querySelector(".apply") // 모달창의 확인 버튼
+backModalOpen.addEventListener("click",() =>{
+    alertModal.removeAttribute("style")
+})
+
+closeAlertModal.addEventListener("click", () =>{
+    alertModal.style.display = "none";
+})
+
+// 확인 버튼은 나중에 서버 때 연결. 선언만.
