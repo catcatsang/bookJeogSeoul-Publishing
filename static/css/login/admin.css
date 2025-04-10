@@ -1,23 +1,95 @@
-body {
-    --header-width: 1440px;
-    --today-width: 1440px;
-    --search-width: 1440px;
-    --feed-width: 1440px;
-    --library-width: 1440px;
-    --management-width: 600px;
-    --ai-agent-width: 1000px;
-    --book-detail-width: 1440px;
-    --audio-detail-width: 1440px;
-    --depth-width: 1440px;
-    --footer-width: 1440px;
-    --inner-width: 1280px;
-    --middle-width: 700px;
-    --road-detail-width: 1440px;
-    --happy-max-width: 600px;
-    --customer-width: 1440px;
+*, :after, :before {
+    box-sizing: border-box;
 }
-button {
-    cursor: pointer;
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+* {
+    letter-spacing: -.6px;
+}
+body {
+    height: 100;
+}
+body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=light] {
+    --ui-background: #fff;
+    --ui-01: #fbfbfb;
+    --ui-02: #f7f7f7;
+    --ui-03: #f2f2f2;
+    --ui-04: #efefef;
+    --ui-05: #ececec;
+    --ui-06: #dfdfdf;
+    --ui-07: #c1c1c1;
+    --ui-08: #555;
+    --ui-09: #333;
+    --ui-10: #242424;
+    --ui-up: #fff;
+    --ui-up-01: #fff;
+    --ui-up-02: #fff;
+    --ui-up-03: #fff;
+    --ui-up-04: #fff;
+    --primary: #ffeb60;
+    --primary-press: #ffe04b;
+    --secondary: #333;
+    --secondary-press: #242424;
+    --tertiary: #fff;
+    --tertiary-press: #f7f7f7;
+    --danger: #df1d1d;
+    --danger-press: #bc1a1a;
+    --quaternary: #ececec;
+    --quaternary-press: #dfdfdf;
+    --cancel: #c1c1c1;
+    --cancel-press: #a5a5a5;
+    --success: #0073cb;
+    --error: #f05c2e;
+    --text-strong: #000;
+    --text-01: #242424;
+    --text-02: #555;
+    --text-03: #6f6f6f;
+    --text-04: #8b8b8b;
+    --field-readonly: #ececec;
+    --placeholder: #c1c1c1;
+    --audio: #a451f7;
+    --myaudio: #533670;
+    --focus: #469fe3;
+    --Line-01: #dfdfdf;
+    --Line-02: #ececec;
+    --Line-03: #f7f7f7;
+}
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: white;
+    border-bottom: 1px solid gray;
+}
+.header header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: var(--header-width);
+    height: 70px;
+    padding: 0 30px;
+    margin: 0 auto;
+    background: var(--ui-background);
+}
+.header a {
+    display: block;
+    height: 20px;
+}
+img {
+    max-width: 130%;
+}
+h1 {
+    width: 100px;
+    margin: 0 50px 30px 0;
+    z-index: 1;
 }
 @font-face {
     font-family: SpoqaHanSansNeo;
@@ -41,6 +113,53 @@ button {
     font-size: 15px;
     line-height: 2.5;
     color: var(--text-01);
+}
+.admin-login {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    margin: auto;
+    justify-content: center;
+}
+.login-wrap {
+    
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 12px;
+    
+    justify-content: center;
+}
+.input-item {
+    padding-top: 10px;
+}
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto 0;
+}
+body {
+    --header-width: 1440px;
+    --today-width: 1440px;
+    --search-width: 1440px;
+    --feed-width: 1440px;
+    --library-width: 1440px;
+    --management-width: 600px;
+    --ai-agent-width: 1000px;
+    --book-detail-width: 1440px;
+    --audio-detail-width: 1440px;
+    --depth-width: 1440px;
+    --footer-width: 1440px;
+    --inner-width: 1280px;
+    --middle-width: 700px;
+    --road-detail-width: 1440px;
+    --happy-max-width: 600px;
+    --customer-width: 1440px;
+}
+button {
+    cursor: pointer;
 }
 body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=light] {
     --ui-background: #fff;
@@ -196,7 +315,7 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
 }
 .input-id-label {
     display: block;
-    margin-bottom: -8px;
+    margin-bottom: -9px;
     font-size: 10px;
     color: var(--text-04);
 }
@@ -218,10 +337,7 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
     background: url(../../images/main/mainimage2.gif)
     no-repeat 50% / cover;
 }
-.login-container {
-    display: flex;
-    min-height: 100vh;
-}
+
 .input-label-id {
     border-radius: 4px;
     display: block;
@@ -249,7 +365,7 @@ input:focus {
 }
 .input-pw-label {
     display: block;
-    margin-bottom: -8px;
+    margin-bottom: -9px;
     font-size: 10px;
     color: var(--text-04);
 }
@@ -421,4 +537,12 @@ input:focus {
     justify-content: center;
     padding-top: 30px;
     scale: 1.1;
+}
+.login-container {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(232, 223, 223);
+    border-radius: 15px;
+    width: 500px;
+    height: 600px;
+    padding: 50px;
 }

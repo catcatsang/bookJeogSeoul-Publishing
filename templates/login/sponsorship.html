@@ -3,28 +3,27 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>로그인 | 북적북적</title>
-        <link rel="stylesheet" href="../../static/css/login/login.css" />
+        <title>단체로그인 | 북적북적</title>
+        <link rel="stylesheet" href="../../static/css/login/sopnsorship.css" />
     </head>
     <body>
         <!-- 로그인 하는 영역 -->
         <div class="login-container">
             <div class="login-content">
-                <h3 class="title">독서와 친해지면 지혜가 늘어나요</h3>
-                <p class="sub-title">책을 읽고 지식 뿜뿜!</p>
+                <h1 class="title">밀리의 서재<br>기업회원 로그인</h3>
                 <!-- 아이디 입력란 -->
-                <div class="input-item">
+                <div class="input-item id">
                     <div class="bjs-input-id">
                         <label class="input-label-id">
                             <div class="inner">
                                 <div class="input">
-                                    <span class="input-id-label">아이디</span>
+                                    <span class="input-id-label">기업회원 아이디</span>
                                     <input
                                         autocomplete="off"
-                                        type="search"
+                                        type="text"
                                         name=""
                                         id="bjs-id"
-                                        placeholder="아이디를 입력해주세요."
+                                        placeholder="아이디 입력."
                                         style="outline: none; border: none"
                                     />
                                 </div>
@@ -66,30 +65,10 @@
                         <span class="login-btn-tag">로그인</span>
                     </button>
                 </div>
-                <!-- 회원가입 / ID/PW찾기 / 기업회원 로그인 -->
-                <ul class="login-sub-menu">
-                    <li>
-                        <a href="">회원가입</a>
-                    </li>
-                    <li>
-                        <a href="">ID/PW찾기</a>
-                    </li>
-                    <li>
-                        <a href="">기업회원 로그인</a>
-                    </li>
-                </ul>
-                <!-- 또는 라인 -->
-                <div class="or-line">
-                    <p>또는</p>
-                </div>
-                <!-- 카카오 로그인 -->
-                <div class="kakao-login-wrap">
-                    <a class="kakao-login">
-                        <img
-                            src="../../static/images/login/kakao_login/ko/kakao_login_medium_wide.png"
-                        />
-                    </a>
-                </div>
+                <!-- 비밀번호 분실 a태그 -->
+                <p class="find-passwd-p">비밀번호를 분실하셧나요?
+                    <a href="">비밀번호찾기</a>
+                </p>
             </div>
         </div>
 
@@ -114,5 +93,5 @@
             </div>
         </div>
     </body>
-    <script src="../../static/js/login/login.js"></script>
+    <script src="../../static/js/login/sponsorship.js"></script>
 </html>

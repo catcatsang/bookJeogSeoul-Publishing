@@ -16,6 +16,11 @@ body {
     --happy-max-width: 600px;
     --customer-width: 1440px;
 }
+[type=email], [type=number], [type=password], [type=tel], [type=text] {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
 button {
     cursor: pointer;
 }
@@ -110,8 +115,6 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
 }
 .login-container .input-item {
     margin-bottom: 8px;
-    display: -ms-flexbox;
-    display: flex
 ;
     -ms-flex-align: center;
     align-items: center;
@@ -130,9 +133,14 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
 .login-container .title {
     color: var(--text-01);
     font-size: 24px;
-    margin-bottom: 4px;
+    height: 40px;
 }
-.bjs-input-id {
+.bjs-input-name {
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+}
+.bjs-input-email {
     flex: 1;
     width: 100%;
     overflow: hidden;
@@ -146,7 +154,7 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
 .input {
     flex: 1;
 }
-#clear-button-id {
+.clear-button {
     overflow: hidden;
     width: 20px;
     height: 20px;
@@ -162,7 +170,7 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
     background: transparent;
     display: none;
 }
-#clear-button-pw {
+#clear-button {
     overflow: hidden;
     width: 20px;
     height: 20px;
@@ -178,7 +186,14 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
     background: transparent;
     display: none;
 }
-#clear-button-id:before {
+.email-inner {
+    height: 100%;
+    gap: 8px;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.clear-button:before {
     font-size: 17px;
     color: var(--ui-06);
     line-height: 16px;
@@ -186,7 +201,23 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
     font-family: icon;
     pointer-events: none;
 }
-#clear-button-pw:before {
+.clear-button-gender-num {
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 17px;
+    color: var(--ui-06);
+    line-height: 16px;
+    content: "\e84e";
+    font-family: icon;
+    background: transparent;
+    display: none;
+}
+.clear-button-gender-num:before {
     font-size: 17px;
     color: var(--ui-06);
     line-height: 16px;
@@ -194,11 +225,19 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
     font-family: icon;
     pointer-events: none;
 }
-.input-id-label {
+.input-email-label {
     display: block;
     margin-bottom: -8px;
     font-size: 10px;
     color: var(--text-04);
+    cursor: pointer;
+}
+.input-name-label {
+    display: block;
+    margin-bottom: -8px;
+    font-size: 10px;
+    color: var(--text-04);
+    cursor: pointer;
 }
 #bjs-id {
     width: 100%;
@@ -222,7 +261,14 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
     display: flex;
     min-height: 100vh;
 }
-.input-label-id {
+.input-label-name {
+    border-radius: 4px;
+    display: block;
+    height: 56px;
+    padding: 8px 12px;
+    border: 2px solid var(--ui-06);
+}
+.input-label-email {
     border-radius: 4px;
     display: block;
     height: 56px;
@@ -232,31 +278,6 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
 input:focus {
     border-color: none;
     border: none
-}
-#bjs-pw {
-    width: 100%;
-    height: 24px;
-    font-size: 16px;
-    text-align: left;
-    color: var(--text-01);
-}
-.input-label-pw {
-    border-radius: 4px;
-    display: block;
-    height: 56px;
-    padding: 8px 12px;
-    border: 2px solid var(--ui-06);
-}
-.input-pw-label {
-    display: block;
-    margin-bottom: -8px;
-    font-size: 10px;
-    color: var(--text-04);
-}
-.bjs-input-pw {
-    flex: 1;
-    width: 100%;
-    overflow: hidden;
 }
 @font-face {
     font-family: icon;
@@ -308,7 +329,6 @@ input:focus {
 }
 .login-sub-menu li:last-child:after {
     content: none;
-    
 }
 #modal-wrap {
     overflow: hidden;
@@ -421,4 +441,119 @@ input:focus {
     justify-content: center;
     padding-top: 30px;
     scale: 1.1;
+}
+input::placeholder {
+    color: #c1c1c1;
+}
+.birth-num {
+    flex: 1;
+    display: flex;
+    height: 65px;
+}
+.gender-num {
+    flex: 1;
+    display: flex;
+    padding-top: 4px;
+}
+.birth-line {
+    font-size: 16px;
+    color: var(--text-01);
+    margin-top: 16px;
+}
+.birth-wrap  {
+    overflow: hidden;
+    flex: 1;
+}
+.birth-wrap label{
+    display: block;
+    height: 56px;
+    padding: 8px 12px;
+    border: 1px solid;
+    border-radius: 4px;
+    border: none;
+}
+.input-birth-gender {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 4px;
+    height: 56px;
+    border: 2px solid;
+    border-color: var(--ui-06);
+    position: relative;
+    -ms-flex: 1;
+    flex: 1;
+    width: 100%;
+}
+.input-birth-gender button {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    margin-top: -8px;
+    color: #000;
+    line-height: 20px;
+    font-size: 16px;
+    width: 20px;
+}
+.inner {
+    height: 100%;
+    gap: 8px;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.input {
+    flex: 1;
+}
+.input span {
+    display: block;
+    margin-bottom: -8px;
+    font-size: 10px;
+    color: var(--text-04);
+}
+
+.birth-input {
+    width: 100%;
+    height: 20px;
+    font-size: 16px;
+    text-align: left;
+    color: var(--text-01);
+}
+.gender-input {
+    width: 100%;
+    height: 24px;
+    font-size: 16px;
+    text-align: center;
+    color: var(--text-01);
+}
+input:focus {
+    outline: none;
+}
+.gender-dot {
+    font-size: 16px;
+    color: var(--text-01);
+    flex: 1;
+    padding: 8px 0;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.gender-wrap {
+    overflow: hidden;
+    width: 40px;
+}
+.gender-wrap laber {
+    border: none;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    padding: 8px 12px;
+}
+.gender-input {
+    width: 100%;
+    height: 24px;
+    font-size: 16px;
+    text-align: center;
+    color: var(--text-01);
 }
