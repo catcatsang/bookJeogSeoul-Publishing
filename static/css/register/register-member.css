@@ -1,95 +1,28 @@
-*, :after, :before {
-    box-sizing: border-box;
-}
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-*, :after, :before {
-    box-sizing: border-box;
-}
-* {
-    letter-spacing: -.6px;
-}
 body {
-    height: 100;
+    --header-width: 1440px;
+    --today-width: 1440px;
+    --search-width: 1440px;
+    --feed-width: 1440px;
+    --library-width: 1440px;
+    --management-width: 600px;
+    --ai-agent-width: 1000px;
+    --book-detail-width: 1440px;
+    --audio-detail-width: 1440px;
+    --depth-width: 1440px;
+    --footer-width: 1440px;
+    --inner-width: 1280px;
+    --middle-width: 700px;
+    --road-detail-width: 1440px;
+    --happy-max-width: 600px;
+    --customer-width: 1440px;
 }
-body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=light] {
-    --ui-background: #fff;
-    --ui-01: #fbfbfb;
-    --ui-02: #f7f7f7;
-    --ui-03: #f2f2f2;
-    --ui-04: #efefef;
-    --ui-05: #ececec;
-    --ui-06: #dfdfdf;
-    --ui-07: #c1c1c1;
-    --ui-08: #555;
-    --ui-09: #333;
-    --ui-10: #242424;
-    --ui-up: #fff;
-    --ui-up-01: #fff;
-    --ui-up-02: #fff;
-    --ui-up-03: #fff;
-    --ui-up-04: #fff;
-    --primary: #ffeb60;
-    --primary-press: #ffe04b;
-    --secondary: #333;
-    --secondary-press: #242424;
-    --tertiary: #fff;
-    --tertiary-press: #f7f7f7;
-    --danger: #df1d1d;
-    --danger-press: #bc1a1a;
-    --quaternary: #ececec;
-    --quaternary-press: #dfdfdf;
-    --cancel: #c1c1c1;
-    --cancel-press: #a5a5a5;
-    --success: #0073cb;
-    --error: #f05c2e;
-    --text-strong: #000;
-    --text-01: #242424;
-    --text-02: #555;
-    --text-03: #6f6f6f;
-    --text-04: #8b8b8b;
-    --field-readonly: #ececec;
-    --placeholder: #c1c1c1;
-    --audio: #a451f7;
-    --myaudio: #533670;
-    --focus: #469fe3;
-    --Line-01: #dfdfdf;
-    --Line-02: #ececec;
-    --Line-03: #f7f7f7;
+[type=email], [type=number], [type=password], [type=tel], [type=text] {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
 }
-.header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 50;
-    background: white;
-    border-bottom: 1px solid gray;
-}
-.header header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: var(--header-width);
-    height: 70px;
-    padding: 0 30px;
-    margin: 0 auto;
-    background: var(--ui-background);
-}
-.header a {
-    display: block;
-    height: 20px;
-}
-img {
-    max-width: 130%;
-}
-h1 {
-    width: 100px;
-    margin: 0 50px 30px 0;
-    z-index: 1;
+button {
+    cursor: pointer;
 }
 @font-face {
     font-family: SpoqaHanSansNeo;
@@ -113,53 +46,6 @@ h1 {
     font-size: 15px;
     line-height: 2.5;
     color: var(--text-01);
-}
-.admin-login {
-    display: flex;
-    width: 100%;
-    position: absolute;
-    top: 20%;
-    margin: auto;
-    justify-content: center;
-}
-.login-wrap {
-    
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 12px;
-    
-    justify-content: center;
-}
-.input-item {
-    padding-top: 10px;
-}
-.login-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto 0;
-}
-body {
-    --header-width: 1440px;
-    --today-width: 1440px;
-    --search-width: 1440px;
-    --feed-width: 1440px;
-    --library-width: 1440px;
-    --management-width: 600px;
-    --ai-agent-width: 1000px;
-    --book-detail-width: 1440px;
-    --audio-detail-width: 1440px;
-    --depth-width: 1440px;
-    --footer-width: 1440px;
-    --inner-width: 1280px;
-    --middle-width: 700px;
-    --road-detail-width: 1440px;
-    --happy-max-width: 600px;
-    --customer-width: 1440px;
-}
-button {
-    cursor: pointer;
 }
 body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=light] {
     --ui-background: #fff;
@@ -229,8 +115,6 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
 }
 .login-container .input-item {
     margin-bottom: 8px;
-    display: -ms-flexbox;
-    display: flex
 ;
     -ms-flex-align: center;
     align-items: center;
@@ -249,9 +133,15 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
 .login-container .title {
     color: var(--text-01);
     font-size: 24px;
-    margin-bottom: 4px;
+    height: 40px;
+    margin-bottom: 20px;
 }
-.bjs-input-id {
+.bjs-input-name {
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+}
+.bjs-input-email {
     flex: 1;
     width: 100%;
     overflow: hidden;
@@ -265,7 +155,7 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
 .input {
     flex: 1;
 }
-#clear-button-id {
+.clear-button {
     overflow: hidden;
     width: 20px;
     height: 20px;
@@ -281,7 +171,7 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
     background: transparent;
     display: none;
 }
-#clear-button-pw {
+#clear-button {
     overflow: hidden;
     width: 20px;
     height: 20px;
@@ -297,7 +187,14 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
     background: transparent;
     display: none;
 }
-#clear-button-id:before {
+.email-inner {
+    height: 100%;
+    gap: 8px;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.clear-button:before {
     font-size: 17px;
     color: var(--ui-06);
     line-height: 16px;
@@ -305,7 +202,23 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
     font-family: icon;
     pointer-events: none;
 }
-#clear-button-pw:before {
+.clear-button-gender-num {
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 17px;
+    color: var(--ui-06);
+    line-height: 16px;
+    content: "\e84e";
+    font-family: icon;
+    background: transparent;
+    display: none;
+}
+.clear-button-gender-num:before {
     font-size: 17px;
     color: var(--ui-06);
     line-height: 16px;
@@ -313,11 +226,19 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
     font-family: icon;
     pointer-events: none;
 }
-.input-id-label {
+.input-email-label {
     display: block;
-    margin-bottom: -9px;
+    margin-bottom: -8px;
     font-size: 10px;
     color: var(--text-04);
+    cursor: pointer;
+}
+.input-name-label {
+    display: block;
+    margin-bottom: -8px;
+    font-size: 10px;
+    color: var(--text-04);
+    cursor: pointer;
 }
 #bjs-id {
     width: 100%;
@@ -334,11 +255,21 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
 .login-container:before {
     flex: 1;
     content: "";
-    background: url(../../images/main/mainimage2.gif)
+    background: url(../../images/main/mainimage1.gif)
     no-repeat 50% / cover;
 }
-
-.input-label-id {
+.login-container {
+    display: flex;
+    min-height: 100vh;
+}
+.input-label-name {
+    border-radius: 4px;
+    display: block;
+    height: 56px;
+    padding: 8px 12px;
+    border: 2px solid var(--ui-06);
+}
+.input-label-email {
     border-radius: 4px;
     display: block;
     height: 56px;
@@ -349,31 +280,6 @@ input:focus {
     border-color: none;
     border: none
 }
-#bjs-pw {
-    width: 100%;
-    height: 24px;
-    font-size: 16px;
-    text-align: left;
-    color: var(--text-01);
-}
-.input-label-pw {
-    border-radius: 4px;
-    display: block;
-    height: 56px;
-    padding: 8px 12px;
-    border: 2px solid var(--ui-06);
-}
-.input-pw-label {
-    display: block;
-    margin-bottom: -9px;
-    font-size: 10px;
-    color: var(--text-04);
-}
-.bjs-input-pw {
-    flex: 1;
-    width: 100%;
-    overflow: hidden;
-}
 @font-face {
     font-family: icon;
     src: url(https://d3udu241ivsax2.cloudfront.net/common/mds/fonts/mds-icon-v9.woff2) format("woff"),url(https://d3udu241ivsax2.cloudfront.net/common/mds/fonts/mds-icon-v9.woff) format("woff2");
@@ -382,11 +288,11 @@ input:focus {
 .icon-input-delete {
     content: "\e84e";
 }
-.login-btn-area {
+.next-btn-area {
     margin-top: 16px !important;
     position: relative;
 }
-#login-btn {
+#next-btn {
     overflow: hidden;
     width: 100%;
     background-color: #90ff68;
@@ -397,6 +303,22 @@ input:focus {
     border-radius: 4px;
     opacity: .4;
     cursor: not-allowed;
+}
+#check-btn {
+    overflow: hidden;
+    width: 100%;
+    background-color: #7a8376;
+    color: #242424;
+    height: 56px;
+    font-size: 16px;
+    padding: 0 24px;
+    border-radius: 4px;
+    opacity: .4;
+    cursor: not-allowed;
+}
+.check-button-area {
+    margin-top: 16px !important;
+    position: relative;
 }
 .login-sub-menu {
     justify-content: center;
@@ -424,9 +346,8 @@ input:focus {
 }
 .login-sub-menu li:last-child:after {
     content: none;
-    
 }
-#modal-wrap {
+.modal-wrap {
     overflow: hidden;
     background-color: var(--ui-up-03);
     border-radius: 8px;
@@ -439,7 +360,7 @@ input:focus {
 .modal-footer {
     display: flex;
 }
-#modal-wrap .modal-footer button {
+.modal-wrap .modal-footer button {
     overflow: hidden;
     width: 100%;
     background-color: var(--primary);
@@ -459,7 +380,7 @@ input:focus {
     align-items: center;
     display: flex;
 }
-#modal-title {
+.modal-title {
     font-weight: 700;
     font-size: 20px;
     line-height: 28px;
@@ -473,7 +394,7 @@ input:focus {
 .modal-body p:last-child {
     margin-bottom: 0;
 }
-#modal {
+.modal {
     position: fixed;
     left: 0;
     right: 0;
@@ -490,11 +411,11 @@ input:focus {
     opacity: 0;
     visibility: hidden;
 }
-#modal.fade-out {
+.modal.fade-out {
     visibility: hidden;
     opacity: 0;
 }
-#modal.fade-in {
+.modal.fade-in {
     visibility: visible;
     opacity: 1;
 }
@@ -538,11 +459,118 @@ input:focus {
     padding-top: 30px;
     scale: 1.1;
 }
-.login-container {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgb(232, 223, 223);
-    border-radius: 15px;
-    width: 500px;
-    height: 600px;
-    padding: 50px;
+input::placeholder {
+    color: #c1c1c1;
+}
+.birth-num {
+    flex: 1;
+    display: flex;
+    height: 65px;
+}
+.gender-num {
+    flex: 1;
+    display: flex;
+    padding-top: 4px;
+}
+.birth-line {
+    font-size: 16px;
+    color: var(--text-01);
+    margin-top: 16px;
+}
+.birth-wrap  {
+    overflow: hidden;
+    flex: 1;
+}
+.birth-wrap label{
+    display: block;
+    height: 65px;
+    padding: 8px 12px;
+    border: 1px solid;
+    border-radius: 4px;
+    border: none;
+}
+.input-birth-gender {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 4px;
+    height: 56px;
+    border: 2px solid;
+    border-color: var(--ui-06);
+    position: relative;
+    -ms-flex: 1;
+    flex: 1;
+    width: 100%;
+}
+.input-birth-gender button {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    margin-top: -8px;
+    color: #000;
+    line-height: 20px;
+    font-size: 16px;
+    width: 20px;
+}
+.inner {
+    height: 100%;
+    gap: 8px;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.input {
+    flex: 1;
+}
+.input span {
+    display: block;
+    margin-bottom: -8px;
+    font-size: 10px;
+    color: var(--text-04);
+}
+
+.birth-input {
+    width: 100%;
+    height: 20px;
+    font-size: 16px;
+    text-align: left;
+    color: var(--text-01);
+}
+.gender-input {
+    width: 100%;
+    height: 24px;
+    font-size: 16px;
+    text-align: center;
+    color: var(--text-01);
+}
+input:focus {
+    outline: none;
+}
+.gender-dot {
+    font-size: 16px;
+    color: var(--text-01);
+    flex: 1;
+    padding: 8px 0;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.gender-wrap {
+    overflow: hidden;
+    width: 40px;
+}
+.gender-wrap laber {
+    border: none;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    padding: 8px 12px;
+}
+.gender-input {
+    width: 100%;
+    height: 24px;
+    font-size: 16px;
+    text-align: center;
+    color: var(--text-01);
 }
