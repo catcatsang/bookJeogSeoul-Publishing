@@ -55,6 +55,7 @@ button {
     margin: 0px auto;
     display: flex;
     align-items: center;
+    border-bottom: 2px solid var(--ui-05);
 }
 
 .header-title {

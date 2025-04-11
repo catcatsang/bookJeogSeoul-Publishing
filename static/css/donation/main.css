@@ -70,20 +70,7 @@
     font-weight: 700;
 }
 
-/* after 요소로 점 찍는 css 인데, 필요 없다 싶으면 추후 삭제 예정 */
-/* .top-header header ul.gnb a:not(.visit):after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 12px;
-    right: 50%;
-    -webkit-transform: translateX(24px);
-    transform: translateX(24px);
-    width: 4px;
-    height: 4px;
-    background-color: rgb(0, 221, 109);
-    border-radius: 50%;
-} */
+
 
 .top-header header .util-wrap{
     display: -ms-flexbox;
