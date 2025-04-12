@@ -85,6 +85,11 @@
     src: local("Pretendard Thin"),url(https://d3udu241ivsax2.cloudfront.net/common/css_v3/fonts/Pretendard-Thin.subset.woff2) format("woff2"),url(https://d3udu241ivsax2.cloudfront.net/common/css_v3/fonts/Pretendard-Thin.subset.woff) format("woff")
 }
 
+@font-face {
+    font-family: fontello;
+    src: url(../../fonts/post/fontello.woff) format("woff");
+}
+
 html {
     overflow-y: scroll;
     font-size: 62.5%;

@@ -40,22 +40,6 @@ recommendListButton.addEventListener("click", (e) => {
     followingListButton.classList.remove("active");
     clickedButton.classList.add("active"); // clickedButton은 <li>가 됨
 });
-// 점 세개 버튼을 누르면 신고하기 버튼이 뜸
-const moreButtons = document.querySelectorAll(".more > button");
-
-moreButtons.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-        const more = btn.closest(".more");
-        const moreArea = more.querySelector(".more-area");
-
-        const isHidden = btn.classList.toggle("hidden");
-        if (isHidden) {
-            moreArea.style.display = "flex";
-        } else {
-            moreArea.style.display = "none";
-        }
-    });
-});
 
 // 팔로우 누르면 버튼 스타일이 바뀜
 const followButtons = document.querySelectorAll(".user>button");
@@ -71,4 +55,78 @@ followButtons.forEach((followButton) => {
             e.target.innerText = "팔로우";
         }
     });
+});
+
+// 토스트 기능(잠깐 나타났다가 사라지는 창)
+function showToast(message) {
+    const toast = document.createElement("div");
+    toast.className = "toast";
+    toast.innerHTML = `<p>${message}</p>`;
+
+    document.querySelector("#wrap").appendChild(toast);
+
+    setTimeout(() => {
+        toast.remove();
+    }, 2500); // 2.5초 후 자동 제거
+}
+
+// 선택한 신고 항목에 .checked 추가
+document.querySelectorAll(".mds-radio").forEach((label) => {
+    label.addEventListener("click", (e) => {
+        const input = label.querySelector('input[type="radio"]');
+
+        if (input) {
+            // 강제로 선택
+            input.checked = true;
+
+            // change 이벤트 트리거 (선택되었음을 알림)
+            input.dispatchEvent(new Event("change"));
+
+            // .checked 클래스 초기화
+            document.querySelectorAll(".mds-radio").forEach((lbl) => {
+                lbl.classList.remove("checked");
+            });
+
+            // 현재 선택된 라벨에 .checked 추가
+            label.classList.add("checked");
+        }
+    });
+});
+
+// 신고하기 버튼 메뉴
+const reportButton = document.querySelector(".mds-icon-more");
+const reportMenu = document.querySelector(".more-area");
+
+reportButton.addEventListener("click", (e) => {
+    e.stopPropagation();
+    reportMenu.style.display = "block";
+});
+
+// 신고하기 메뉴 누르면 모달 뜸
+const reportModal = document.querySelector(".police-popup");
+
+reportMenu.querySelector(".report").addEventListener("click", (e) => {
+    reportModal.style.display = "flex";
+});
+
+// 창 바깥 누르면 신고하기 메뉴 꺼짐
+window.addEventListener("click", (e) => {
+    if (!reportMenu.contains(e.target)) {
+        reportMenu.style.display = "none";
+    }
+});
+
+// 신고하기 취소, 등록버튼
+const cancelReport = document.querySelector(".policecancl");
+const confirmReport = document.querySelector(".review-police");
+
+cancelReport.addEventListener("click", (e) => {
+    reportModal.style.display = "none";
+    reportMenu.style.display = "none";
+});
+
+confirmReport.addEventListener("click", (e) => {
+    showToast("신고가 완료되었습니다.");
+    reportModal.style.display = "none";
+    reportMenu.style.display = "none";
 });
