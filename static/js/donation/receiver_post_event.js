@@ -83,3 +83,11 @@ document.addEventListener("keyup",(e) =>{
     }
 })
 
+const moreButton = document.querySelectorAll(".more-btn");
+
+moreButton.forEach((button) => {
+    button.addEventListener("click",() =>{
+        console.log("클릭 확인")
+        button.nextElementSibling.classList.toggle("more-active");
+    })
+})
