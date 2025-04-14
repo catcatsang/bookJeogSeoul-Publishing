@@ -745,6 +745,10 @@ li {
     content: "\e829";
 }
 
+.mds-icon--more-24-1:before {
+    content: "\e84d";
+}
+
 .mds-icon--comment:before {
     content: "\e838";
 }
@@ -788,6 +792,169 @@ li {
     -ms-flex-pack: center;
     justify-content: center;
 }
+
+/* 신고 모달 */
+
+.user .more>button i {
+    font-size: 24px;
+    color: var(--text-03);
+}
+
+.user .more .more-area {
+    background-color: var(--ui-up-01);
+    box-shadow: 0 0 4px rgba(0,0,0,.12),2px 6px 12px rgba(0,0,0,.12);
+    border-radius: 4px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: absolute;
+    right: 24px;
+    top: 0;
+    z-index: 1
+}
+
+.user .more .more-area button {
+    width: 130px;
+    height: 40px;
+    color: var(--text-01);
+    text-align: left;
+    font-size: 16px;
+    padding-left: 12px
+}
+
+
+/* 신고 모달 */
+.mds-dialog {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,.8);
+}
+
+.mds-dialog .mds-dialog--wrap {
+    overflow: hidden;
+    background-color: var(--ui-up-03);
+    border-radius: 8px;
+    max-width: 328px;
+    width: 100%;
+}
+
+.mds-dialog .mds-dialog--inner {
+    padding: 32px 24px;
+}
+
+.mds-dialog .mds-dialog--header {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.mds-dialog .mds-dialog--header strong {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--text-01);
+}
+
+.mds-dialog .mds-dialog--body {
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 60px;
+}
+
+.mds-dialog .mds-dialog--body, .mds-dialog .mds-dialog--footer {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.mds-radio {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.user .report-popup .report-list .mds-radio {
+    width: 100%;
+}
+
+.mds-radio input {
+    position: absolute;
+}
+
+.mds-radio .mds-radio-view {
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.user .report-popup .report-list .mds-radio .mds-radio-view {
+    width: 100%;
+    height: 48px;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.mds-radio:not(.mds-radio--button) .check {
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    border: 2px solid var(--ui-06);
+    border-radius: 50%;
+    transition: border-width .2s linear;
+}
+
+.mds-radio:not(.mds-radio--button).mds-radio:has(input[type=radio]:checked).mds-radio--secondary .check {
+    border-width: 6px;
+    border-color: var(--secondary);
+}
+
+.user .report-popup .report-list .mds-radio .mds-radio-view .check {
+    margin-right: 0;
+}
+
+.mds-radio .label {
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 14px;
+    transition: color .3s linear;
+}
+
+.mds-radio:not(.mds-radio--button) .label {
+    color: var(--text-04);
+}
+
+.mds-radio:not(.mds-radio--button).mds-radio:has(input[type=radio]:checked) .label {
+    color: var(--text-01);
+}
+
+.user .report-popup .report-list .mds-radio .mds-radio-view .label {
+    color: var(--text-02);
+    font-size: 16px;
+}
+
+/* 신고 모달 */
 
 .mds-dialog.mds-dialog--action .mds-dialog--footer.mds-dialog--ratio :last-child {
     -ms-flex: 0 0 60%;
@@ -994,4 +1161,10 @@ li {
     justify-content: center;
 }
 
+.more-active{
+    display: block !important;
+}
 
+p {
+    outline : none;
+}
