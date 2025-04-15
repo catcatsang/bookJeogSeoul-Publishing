@@ -124,6 +124,16 @@
     margin-right: 0;
 }
 
+
+.mds-radio:not(.mds-radio--button).mds-radio:has(input[type=radio]:checked).mds-radio--secondary .check {
+    border-width: 6px;
+    border-color: var(--secondary);
+}
+
+.mds-radio:not(.mds-radio--button).mds-radio:has(input[type=radio]:checked) .label {
+    color: var(--text-01);
+}
+
 .mds-radio .label {
     -ms-flex: 1;
     flex: 1;

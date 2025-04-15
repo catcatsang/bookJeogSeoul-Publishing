@@ -1,12 +1,22 @@
 const reportButton = document.querySelector(".more-item");
 const reportModal = document.querySelector(".more-ul");
-
+const reportModalOpenButton = reportModal.querySelector("a")
+const reportPopup = document.querySelector(".police-popup")
 reportButton.addEventListener('click',() => {
     if(reportModal.style.display == "none"){
         reportModal.removeAttribute("style")
     }
     else{
         reportModal.style.display = "none";
+    }
+})
+
+reportModalOpenButton.addEventListener("click",() => {
+        if(reportPopup.style.display == "none"){
+        reportPopup.removeAttribute("style")
+    }
+    else{
+        reportPopup.style.display = "none";
     }
 })
 
@@ -90,4 +100,23 @@ moreButton.forEach((button) => {
         console.log("클릭 확인")
         button.nextElementSibling.classList.toggle("more-active");
     })
+})
+
+//  신고 모달
+
+
+const reportConfirmButton = document.querySelector(".btn-review-police")
+document.addEventListener("change",()=>{
+    const reportType = document.querySelector(".report-list input[type=radio]:checked")
+    if(reportType){
+        reportConfirmButton.removeAttribute("disabled")
+    }
+    else{
+        reportConfirmButton.disabled = "disabled"
+    }
+})
+
+const reportCancelButton = document.querySelector(".police-cancel")
+reportCancelButton.addEventListener('click',() =>{
+    reportPopup.style.display = "none"
 })
