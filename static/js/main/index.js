@@ -27,13 +27,16 @@ window.addEventListener("scroll", () => {
 
 // ai소개 스크롤 애니메이션 효과
 // IntersectionObserver 사용해서 scroll 감지
+// float 버튼도 무임승차..
 const fadeEls = document.querySelectorAll(".fade-up");
+const floatBtn = document.querySelector(".float-btn");
 
 const observer = new IntersectionObserver(
     (entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("active");
+                floatBtn.classList.add("show");
             }
         });
     },

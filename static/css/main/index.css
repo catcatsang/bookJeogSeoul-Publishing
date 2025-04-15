@@ -457,3 +457,90 @@ button {
 #share .section-content{
     transform: translateX(-100px);
 }
+
+/* 푸터 */
+#footer{
+    padding-bottom: 50px;
+}
+
+footer{
+    background-color: var(--ui-background);
+    border-top: 1px solid var(--ui-06);
+}
+
+
+footer .footer-inner{
+    max-width: var(--footer-width);
+    padding: 24px 16px 32px;
+    margin: 0 auto;
+}
+
+footer .footer-head{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+footer h1{
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text-01);
+}
+
+footer .copyright{
+    margin: 16px 0 24px;
+    font-size: 16px;
+    color: var(--text-03);
+}
+/* // 푸터 */
+
+/* 떠있는 버튼 */
+.brand-frm .float-btn{
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    z-index: 1;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 343px;
+    height: 56px;
+    border-radius: 28px;
+    background-color: var(--primary);
+    box-shadow: 1px 3px 20px 0 rgba(0, 0, 0, .1);
+    opacity: 0;
+    transform: translateX(-50%) translateY(100px);
+    transition: all .4s ease-in-out;
+    will-change: auto;
+}
+
+@media screen and (min-width: 1440px) {
+    .brand-frm .float-btn{
+        width: 450px;
+    }
+}
+
+.brand-frm .float-btn.show{
+    opacity: 1;
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+}
+
+.brand-frm .float-btn .txt-blk{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 700;
+    letter-spacing: -.6px;
+}
+
+
+/* // 떠있는 버튼 */
