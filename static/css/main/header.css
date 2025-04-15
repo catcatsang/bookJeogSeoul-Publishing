@@ -305,6 +305,7 @@ img {
 @media (min-width: 1000px){
     .mds-icon-alarm:before {
         content: "\e856";
+        font-size: 24px;
     }
 }
 
