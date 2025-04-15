@@ -90,6 +90,17 @@
     src: url(../../fonts/post/fontello.woff) format("woff");
 }
 
+:root {
+    --header-width: 1440px;
+    --back-width: 1440px;
+    --library-sub-width: 1440px;
+    --library-sub-small-width: 600px;
+}
+
+:root {
+    --swiper-theme-color: #007aff;
+}
+
 html {
     overflow-y: scroll;
     font-size: 62.5%;
