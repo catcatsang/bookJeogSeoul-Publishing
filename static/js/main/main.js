@@ -136,6 +136,7 @@ const withCooldown = (action) => {
     action(); // 실제 동작 실행
     setTimeout(() => {
         isCooldown = false;
+        startAutoSlide(); // 쿨타임 끝나면 자동 슬라이드 재시작
     }, cooldownTime);
 };
 
