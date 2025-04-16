@@ -85,6 +85,22 @@
     src: local("Pretendard Thin"),url(https://d3udu241ivsax2.cloudfront.net/common/css_v3/fonts/Pretendard-Thin.subset.woff2) format("woff2"),url(https://d3udu241ivsax2.cloudfront.net/common/css_v3/fonts/Pretendard-Thin.subset.woff) format("woff")
 }
 
+@font-face {
+    font-family: fontello;
+    src: url(../../fonts/post/fontello.woff) format("woff");
+}
+
+:root {
+    --header-width: 1440px;
+    --back-width: 1440px;
+    --library-sub-width: 1440px;
+    --library-sub-small-width: 600px;
+}
+
+:root {
+    --swiper-theme-color: #007aff;
+}
+
 html {
     overflow-y: scroll;
     font-size: 62.5%;
@@ -139,8 +155,8 @@ body, body[data-theme=dark], body[data-theme=dark] .not-dark, body[data-theme=li
     --ui-up-02: #fff;
     --ui-up-03: #fff;
     --ui-up-04: #fff;
-    --primary: #ffeb60;
-    --primary-press: #ffe04b;
+    --primary: #96ea77;
+    --primary-press: #96ea77;
     --secondary: #333;
     --secondary-press: #242424;
     --tertiary: #fff;
