@@ -46,13 +46,15 @@
 
 ## 4. ERD
 
-![ERD](../)
+[ERD]
+<img src="https://github.com/catcatsang/bookJeogSeoul-Publishing/blob/master/tbl_book_post_report%20(DDL)%20%5Bbjseoul%5D.png">
 
 ## 5. 담당업무
 
 ### 5-1 퍼블리싱(publishing)
 
-![퍼블리싱](../)
+[퍼블리싱]
+<img src="https://github.com/catcatsang/bookJeogSeoul-Publishing/blob/master/publisher.png">
 
 > 로그인
 
